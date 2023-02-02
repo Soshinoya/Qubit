@@ -1,0 +1,23 @@
+.input {
+    padding: 10px 25px;
+    border-radius: 30px;
+
+    outline: none;
+    resize: none;
+    overflow-y: hidden;
+
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inputLabel {
+    position: absolute;
+    left: 25px;
+    top: -6px;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus~label {
+    transform: translateY(-20px) scale(0.8);
+}
