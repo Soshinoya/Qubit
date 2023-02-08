@@ -4,8 +4,8 @@ import Button from "../Button/Button"
 const InputWithBtn = ({ inputClass, inputPlaceholder, inputReq, btnClass, btnInner }) => {
     return (
         <div className="d-flex">
-            <Input className={inputClass} placeholder={inputPlaceholder} required={inputReq} />
-            <Button className={btnClass} children={btnInner} />
+            <Input className={`input-with-btn ${inputClass}`} placeholder={inputPlaceholder} required={inputReq} />
+            <Button className={`button-with-input ${btnClass}`} children={btnInner} />
         </div>
     )
 }

@@ -1,8 +1,12 @@
+import Offer from "../components/Offer/Offer"
+import Partners from "../components/Partners/Partners"
+
 const Home = () => {
     return (
-        <div>
-            <h1 className="title">Hello <span>World</span></h1>
-        </div>
+        <main className="main">
+            <Offer />
+            <Partners />
+        </main>
     )
 }
 
