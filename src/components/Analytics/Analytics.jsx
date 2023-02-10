@@ -26,7 +26,6 @@ const Analytics = () => {
     gsap.registerPlugin(ScrollTrigger)
 
     ScrollTrigger.defaults({
-        scrub: 1,
         toggleActions: 'play pause resume reset'
     })
 
@@ -46,7 +45,8 @@ const Analytics = () => {
             scrollTrigger: {
                 trigger: marqueesFirst,
                 start: `${analyticsInfoFirstHeight} bottom`,
-                end: `${analyticsInfoFirstHeight + analyticsInfoFirstHeight} top`
+                end: `${analyticsInfoFirstHeight + analyticsInfoFirstHeight} top`,
+                scrub: 1,
             },
             keyframes: {
                 "0%": { y: `-${analyticsInfoFirstHeight + yTransform}px`},
@@ -56,7 +56,8 @@ const Analytics = () => {
 
         gsap.to(marqueesSecond, {
             scrollTrigger: {
-                trigger: marqueesSecond
+                trigger: marqueesSecond,
+                scrub: 1,
             },
             y: `-${yTransform}%`
         })

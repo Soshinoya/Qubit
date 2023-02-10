@@ -25,7 +25,6 @@ const Partners = () => {
     gsap.registerPlugin(ScrollTrigger)
 
     ScrollTrigger.defaults({
-        scrub: 1,
         toggleActions: 'play pause resume reset'
     })
 
@@ -35,6 +34,7 @@ const Partners = () => {
         gsap.to(marquees, {
             scrollTrigger: {
                 trigger: marquees,
+                scrub: 1
             },
             x: '-50%'
         })
