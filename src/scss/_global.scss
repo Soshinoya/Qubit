@@ -80,7 +80,7 @@ p span {
 
 .button {
     width: fit-content;
-    border: 1px solid var(--accent-color);
+    border: none;
     border-radius: 30px;
     background-color: var(--white-color);
     color: var(--accent-color);
@@ -90,16 +90,23 @@ p span {
     transition: 0.3s;
 
     &:hover {
-        color: var(--accent-color);
-        background-color: var(--white-color);
+        color: var(--white-color);
+        background-color: var(--accent-color);
     }
 
     &--accent {
+        border: 1px solid var(--accent-color);
         background-color: var(--accent-color);
         color: var(--white-color);
+
+        &:hover {
+            color: var(--accent-color);
+            background-color: var(--white-color);
+        }
     }
 
     &-with-input {
+        border: 1px solid var(--accent-color);
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         border-left: none;

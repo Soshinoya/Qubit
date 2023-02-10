@@ -73,7 +73,7 @@ const Analytics = () => {
                                 Grow 2.5x faster than your competitors.
                             </h2>
                             <div className="analytics-content__links d-flex align-items-center flex-wrap">
-                                <Button className="analytics-content__btn" children="Book a demo" />
+                                <Button className="analytics-content__btn button--accent" children="Book a demo" />
                                 <CustomLink className="analytics-content__link custom-link--stripe-right" to="#" children="Meet our customers >" />
                             </div>
                             <div className="analytics-content__texts">

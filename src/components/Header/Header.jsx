@@ -39,7 +39,7 @@ const Header = () => {
                         </ul>
                     </nav>
                     <div className="header-btns d-flex align-items-center">
-                        <Button className="header-btns__item" children="Book a demo" />
+                        <Button className="header-btns__item button--accent" children="Book a demo" />
                         <NavLink to="login" className="header-btns__link">Log In</NavLink>
                     </div>
                 </div>

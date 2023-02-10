@@ -5,7 +5,7 @@ const InputWithBtn = ({ inputClass, inputPlaceholder, inputReq, btnClass, btnInn
     return (
         <div className="d-flex">
             <Input className={`input-with-btn ${inputClass ? inputClass : ''}`} placeholder={inputPlaceholder} required={inputReq} />
-            <Button className={`button-with-input ${btnClass ? btnClass : ''}`} children={btnInner} />
+            <Button className={`button-with-input button--accent ${btnClass ? btnClass : ''}`} children={btnInner} />
         </div>
     )
 }

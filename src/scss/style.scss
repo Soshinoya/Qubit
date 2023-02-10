@@ -241,3 +241,45 @@
         max-width: 315px;
     }
 }
+
+.preview {
+    padding: 100px 0;
+    background-color: var(--light-gray-color);
+
+    &__img {
+        margin: 90px 0 75px;
+        height: 560px;
+
+        img {
+            margin: 0 auto;
+            height: 100%;
+            object-fit: contain;
+            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+        }
+    }
+
+    &__links {
+        gap: 20px;
+    }
+}
+
+.abilities {
+    padding: 100px 0 220px;
+
+    &__title {
+        margin-bottom: 60px;
+    }
+}
+
+.abilities-content {
+    &__item {
+        max-width: 275px;
+        margin: 0 auto 80px;
+
+    }
+
+    &__item-title {
+        margin: 5px 0 10px;
+    }
+}

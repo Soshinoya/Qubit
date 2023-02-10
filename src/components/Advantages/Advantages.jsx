@@ -1,52 +1,20 @@
 import { useRef, useEffect } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+
+import simpleJumpAnim from "../../utils/simpleJumpAnim";
 
 const Advantages = () => {
 
     const advantagesInner = useRef(null)
 
-    const advantages = gsap.utils.selector(advantagesInner)
-
-    gsap.registerPlugin(ScrollTrigger)
-
-    ScrollTrigger.defaults({
-        toggleActions: 'play pause resume reset',
-    })
-
+    const selectorArr = [
+        '.advantages-content__item--first',
+        '.advantages-content__item--second',
+        '.advantages-content__item--third'
+    ]
+    
     useEffect(() => {
         if (advantagesInner === null) return
-
-        const animEase = "back.out(4)"
-        
-        const animOffsetY = 100
-
-        const animDuration = .7
-
-        gsap.to(advantages('.advantages-content__item--first'), {
-            scrollTrigger: '.advantages-content__item--first',
-            keyframes: {
-                "0%": { y: `${animOffsetY}px`, opacity: 0, ease: animEase },
-                "100%": { y: '0', opacity: 1, ease: animEase }
-            },
-            duration: animDuration,
-        })
-        gsap.to(advantages('.advantages-content__item--second'), {
-            scrollTrigger: '.advantages-content__item--second',
-            keyframes: {
-                "0%": { y: `${animOffsetY}px`, opacity: 0, ease: animEase },
-                "100%": { y: '0', opacity: 1, ease: animEase }
-            },
-            duration: animDuration + .3,
-        })
-        gsap.to(advantages('.advantages-content__item--third'), {
-            scrollTrigger: '.advantages-content__item--third',
-            keyframes: {
-                "0%": { y: `${animOffsetY}px`, opacity: 0, ease: animEase },
-                "100%": { y: '0', opacity: 1, ease: animEase }
-            },
-            duration: animDuration + .6,
-        })
+        simpleJumpAnim(advantagesInner, selectorArr)
     }, [])
 
     return (
