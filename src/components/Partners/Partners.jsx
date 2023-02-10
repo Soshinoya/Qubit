@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
 
+import CustomLink from "../CustomLink/CustomLink"
+
 import barbour from './../../images/icons/barbour.png'
 import dx from './../../images/icons/dx.png'
 import estee from './../../images/icons/estee.png'
@@ -23,25 +25,20 @@ const Partners = () => {
     gsap.registerPlugin(ScrollTrigger)
 
     ScrollTrigger.defaults({
-        scrub: true,
+        scrub: 1,
         toggleActions: 'play pause resume reset'
     })
 
     useEffect(() => {
         if (marqueeContentElemFirst === null || marqueeContentElemSecond === null) return
-        gsap.to(marqueeContentElemFirst.current, {
+        const marquees = [marqueeContentElemFirst.current, marqueeContentElemSecond.current]
+        gsap.to(marquees, {
             scrollTrigger: {
-                trigger: marqueeContentElemFirst.current,
+                trigger: marquees,
             },
             x: '-50%'
         })
-        gsap.to(marqueeContentElemSecond.current, {
-            scrollTrigger: {
-                trigger: marqueeContentElemSecond.current,
-            },
-            x: '-50%'
-        })
-    }, [marqueeContentElemFirst, marqueeContentElemSecond])
+    }, [])
 
     return (
         <section className="partners">
@@ -103,9 +100,7 @@ const Partners = () => {
                         </Link>
                     </ul>
                 </div>
-                <Link to="#" className="partners__link">
-                    Meet our customers {'>'}
-                </Link>
+                <CustomLink to="#" children="Meet our customers >" />
             </div>
         </section>
     )

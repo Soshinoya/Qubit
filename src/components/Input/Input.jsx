@@ -27,7 +27,7 @@ const Input = ({ required, className, placeholder }) => {
                 onBlur={blurHandler}
                 onFocus={focusHandler}
                 required={required}
-                className={`input ${className} ${styles.input}`}
+                className={`input ${className ? className : ''} ${styles.input}`}
                 autoComplete="false"
                 rows="1"
             ></textarea>

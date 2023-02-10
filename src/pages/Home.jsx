@@ -1,3 +1,4 @@
+import Analytics from "../components/Analytics/Analytics"
 import Offer from "../components/Offer/Offer"
 import Partners from "../components/Partners/Partners"
 
@@ -6,6 +7,7 @@ const Home = () => {
         <main className="main">
             <Offer />
             <Partners />
+            <Analytics />
         </main>
     )
 }

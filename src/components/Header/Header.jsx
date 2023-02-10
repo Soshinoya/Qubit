@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom"
 import Headroom from "react-headroom"
 
 import Button from './../Button/Button'
-import Link from "../Link/Link"
 
 import qubitImg from './../../images/icons/qubit.png'
 
@@ -17,25 +16,25 @@ const Header = () => {
                     <nav className="header-menu">
                         <ul className="header-menu__list d-flex align-items-center">
                             <li className="header-menu__item">
-                                <Link className="header-menu__link" href="#">Why Qubit?</Link>
+                                <a className="header-menu__link" href="#">Why Qubit?</a>
                             </li>
                             <li className="header-menu__item">
-                                <Link className="header-menu__link" href="#">Products</Link>
+                                <a className="header-menu__link" href="#">Products</a>
                             </li>
                             <li className="header-menu__item">
-                                <Link className="header-menu__link" href="#">Solutions</Link>
+                                <a className="header-menu__link" href="#">Solutions</a>
                             </li>
                             <li className="header-menu__item">
-                                <Link className="header-menu__link" href="#">Customers</Link>
+                                <a className="header-menu__link" href="#">Customers</a>
                             </li>
                             <li className="header-menu__item">
-                                <Link className="header-menu__link" href="#">Case studies</Link>
+                                <a className="header-menu__link" href="#">Case studies</a>
                             </li>
                             <li className="header-menu__item">
-                                <Link className="header-menu__link" href="#">Resources</Link>
+                                <a className="header-menu__link" href="#">Resources</a>
                             </li>
                             <li className="header-menu__item">
-                                <Link className="header-menu__link" href="#">More</Link>
+                                <a className="header-menu__link" href="#">More</a>
                             </li>
                         </ul>
                     </nav>
