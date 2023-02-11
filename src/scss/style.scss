@@ -393,7 +393,7 @@
         width: fit-content;
 
         &::before {
-            content: '';
+            content: "";
             position: absolute;
             left: 0;
             bottom: -10px;
@@ -412,5 +412,40 @@
     &__link {
         text-align: left;
         color: var(--white-color);
+    }
+}
+
+.ecosystem {
+    background-color: var(--light-gray-color);
+
+    &__img {
+        display: inline;
+        height: 570px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.ecosystem-content {
+    margin: 100px 0;
+    text-align: left;
+
+    &__title {
+        font-size: 40px;
+        line-height: 45px;
+        color: var(--dark-purple-color);
+        text-align: left;
+    }
+
+    &__text {
+        margin: 50px 0 75px;
+        font-size: 13px;
+        line-height: 30px;
+        color: var(--black-color);
+        max-width: 570px;
     }
 }
