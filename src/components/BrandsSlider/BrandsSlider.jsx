@@ -17,7 +17,7 @@ const BrandsSlider = () => {
                     Trusted by leading brands.
                 </h2>
                 <div className="brand-slider__inner">
-                    <Carousel prevIcon={(
+                    <Carousel indicators={false} prevIcon={(
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd" d="M37.068 47.0404C36.3023 47.8062 35.0607 47.8062 34.2951 47.0404L11.7647 24.5101L33.9484 2.32637C34.7142 1.56059 35.9556 1.56059 36.7214 2.32637C37.4871 3.09206 37.4871 4.33353 36.7214 5.09932L17.3106 24.5101L37.068 44.2675C37.8338 45.0332 37.8338 46.2747 37.068 47.0404Z" fill="#6F2CFF" />
                         </svg>
@@ -41,49 +41,55 @@ const BrandsSlider = () => {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="brands-slider__item">
-                                    <div className="brands-slider__item-img">
-                                        <img src={riverImg} alt="brand photo" />
-                                    </div>
-                                    <div className="brands-slider__item-content">
-                                        <div className="brands-slider__item-content__brand">
-                                            <img src={riverIcon} alt="clinique" />
+                                {!window.matchMedia('(max-width: 768px)').matches && (
+                                    <>
+                                        <div className="brands-slider__item">
+                                            <div className="brands-slider__item-img">
+                                                <img src={riverImg} alt="brand photo" />
+                                            </div>
+                                            <div className="brands-slider__item-content">
+                                                <div className="brands-slider__item-content__brand">
+                                                    <img src={riverIcon} alt="clinique" />
+                                                </div>
+                                                <p className="brands-slider__item-content__text">
+                                                    River Island transforms the customer experience with personalization.
+                                                </p>
+                                            </div>
                                         </div>
-                                        <p className="brands-slider__item-content__text">
-                                            River Island transforms the customer experience with personalization.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="brands-slider__item">
-                                    <div className="brands-slider__item-img">
-                                        <img src={mDirectImg} alt="brand photo" />
-                                    </div>
-                                    <div className="brands-slider__item-content">
-                                        <div className="brands-slider__item-content__brand">
-                                            <img src={mDirectIcon} alt="clinique" />
+                                        <div className="brands-slider__item">
+                                            <div className="brands-slider__item-img">
+                                                <img src={mDirectImg} alt="brand photo" />
+                                            </div>
+                                            <div className="brands-slider__item-content">
+                                                <div className="brands-slider__item-content__brand">
+                                                    <img src={mDirectIcon} alt="clinique" />
+                                                </div>
+                                                <p className="brands-slider__item-content__text">
+                                                    MandM Direct drives increase in revenue with deep learning recs
+                                                </p>
+                                            </div>
                                         </div>
-                                        <p className="brands-slider__item-content__text">
-                                            MandM Direct drives increase in revenue with deep learning recs
-                                        </p>
-                                    </div>
-                                </div>
+                                    </>
+                                )}
                             </div>
                         </Carousel.Item>
                         <Carousel.Item>
                             <div className="brands-slider__carousel-inner d-flex justify-content-center">
-                                <div className="brands-slider__item">
-                                    <div className="brands-slider__item-img">
-                                        <img src={cliniqueImg} alt="brand photo" />
-                                    </div>
-                                    <div className="brands-slider__item-content">
-                                        <div className="brands-slider__item-content__brand">
-                                            <img src={cliniqueIcon} alt="clinique" />
+                                {!window.matchMedia('(max-width: 768px)').matches && (
+                                    <div className="brands-slider__item">
+                                        <div className="brands-slider__item-img">
+                                            <img src={cliniqueImg} alt="brand photo" />
                                         </div>
-                                        <p className="brands-slider__item-content__text">
-                                            Clinique builds relationships with millions of customers each year.
-                                        </p>
+                                        <div className="brands-slider__item-content">
+                                            <div className="brands-slider__item-content__brand">
+                                                <img src={cliniqueIcon} alt="clinique" />
+                                            </div>
+                                            <p className="brands-slider__item-content__text">
+                                                Clinique builds relationships with millions of customers each year.
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
+                                )}
                                 <div className="brands-slider__item">
                                     <div className="brands-slider__item-img">
                                         <img src={riverImg} alt="brand photo" />
@@ -97,6 +103,55 @@ const BrandsSlider = () => {
                                         </p>
                                     </div>
                                 </div>
+                                {!window.matchMedia('(max-width: 768px)').matches && (
+                                    <div className="brands-slider__item">
+                                        <div className="brands-slider__item-img">
+                                            <img src={mDirectImg} alt="brand photo" />
+                                        </div>
+                                        <div className="brands-slider__item-content">
+                                            <div className="brands-slider__item-content__brand">
+                                                <img src={mDirectIcon} alt="clinique" />
+                                            </div>
+                                            <p className="brands-slider__item-content__text">
+                                                MandM Direct drives increase in revenue with deep learning recs
+                                            </p>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <div className="brands-slider__carousel-inner d-flex justify-content-center">
+                                {!window.matchMedia('(max-width: 768px)').matches && (
+                                    <>
+                                        <div className="brands-slider__item">
+                                            <div className="brands-slider__item-img">
+                                                <img src={cliniqueImg} alt="brand photo" />
+                                            </div>
+                                            <div className="brands-slider__item-content">
+                                                <div className="brands-slider__item-content__brand">
+                                                    <img src={cliniqueIcon} alt="clinique" />
+                                                </div>
+                                                <p className="brands-slider__item-content__text">
+                                                    Clinique builds relationships with millions of customers each year.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="brands-slider__item">
+                                            <div className="brands-slider__item-img">
+                                                <img src={riverImg} alt="brand photo" />
+                                            </div>
+                                            <div className="brands-slider__item-content">
+                                                <div className="brands-slider__item-content__brand">
+                                                    <img src={riverIcon} alt="clinique" />
+                                                </div>
+                                                <p className="brands-slider__item-content__text">
+                                                    River Island transforms the customer experience with personalization.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
                                 <div className="brands-slider__item">
                                     <div className="brands-slider__item-img">
                                         <img src={mDirectImg} alt="brand photo" />
