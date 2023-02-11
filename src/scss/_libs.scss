@@ -16,3 +16,27 @@ $container-max-widths: (
 );
 
 @import "~bootstrap/scss/bootstrap";
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.carousel-control-prev {
+    left: -30px;
+}
+
+.carousel-control-next {
+    right: -30px;
+}
