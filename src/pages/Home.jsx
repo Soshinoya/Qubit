@@ -7,6 +7,7 @@ import Offer from "../components/Offer/Offer"
 import Partners from "../components/Partners/Partners"
 import Preview from "../components/Preview/Preview"
 import Specialization from "../components/Specialization/Specialization"
+import Subscribe from "../components/Subscribe/Subscribe"
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <BrandsSlider />
             <Specialization />
             <Ecosystem />
+            <Subscribe />
         </main>
     )
 }
